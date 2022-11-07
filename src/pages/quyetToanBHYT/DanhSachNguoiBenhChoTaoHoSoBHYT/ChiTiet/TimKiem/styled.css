@@ -1,0 +1,24 @@
+.ant-popover.ant-popover-placement-bottomLeft {
+    padding-top: 30px;
+}
+.ant-popover-arrow {
+    display: none;
+}
+.ant-popover-placement-bottom,
+.ant-popover-placement-bottomLeft,
+.ant-popover-placement-bottomRight {
+    padding-top: 0px;
+}
+.ant-popover-inner {
+    border-radius: 8px 0px 8px 8px;
+}
+.ant-checkbox-group {
+    width: 140px;
+}
+input.ant-input.ant-input-borderless::placeholder {
+    color: #172B4D;
+}
+
+.ant-select-selection-placeholder {
+    color: #172B4D;
+}

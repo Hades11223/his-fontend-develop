@@ -1,0 +1,11 @@
+export const TRANG_THAI_KHAM_BENH = [20, 60, 70, 100, 140, 150, 50];
+
+export const TRANG_THAI_XET_NGHIEM = [25, 38, 66, 90, 155, 160, 80, 50];
+
+export const TRANG_THAI_CDHA_TDCN = [15, 25, 63, 155, 50];
+
+export const DS_TRANG_THAI_THEO_LOAI = {
+  10: TRANG_THAI_KHAM_BENH,
+  20: TRANG_THAI_XET_NGHIEM,
+  30: TRANG_THAI_CDHA_TDCN,
+};

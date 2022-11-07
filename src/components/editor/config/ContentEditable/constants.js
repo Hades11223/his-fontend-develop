@@ -1,0 +1,41 @@
+export const controlKeys = {
+  enter: 13,
+  ctrl: 17,
+  shift: 16,
+  tab: 9,
+  backspace: 8,
+  break: 3,
+  clear: 12,
+  alt: 18,
+  pause: 19,
+  caps: 20,
+  hangul: 21,
+  hanja: 25,
+  escape: 27,
+  conversion: 28,
+  'non-conversion': 29,
+  pageUp: 33,
+  pageDown: 34,
+  end: 35,
+  home: 36,
+  leftArrow: 37,
+  upArrow: 38,
+  rightArrow: 39,
+  downArrow: 40,
+  select: 41,
+  print: 42,
+  execute: 43,
+  printScreen: 44,
+  insert: 45,
+  help: 47,
+};
+
+export const fontHeight = {
+  8: { offsetMark: 12, offsetHeight: 14, fontSize: 11 , minHeight: 18},
+  10: { offsetMark: 16, offsetHeight: 17, fontSize: 13 , minHeight: 18},
+  12: { offsetMark: 21, offsetHeight: 21, fontSize: 16, minHeight: 24 },
+  14: { offsetMark: 24, offsetHeight: 25, fontSize: 19, minHeight: 24 },
+  18: { offsetMark: 32, offsetHeight: 34, fontSize: 24, minHeight: 24 },
+};
+
+export default controlKeys

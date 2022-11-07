@@ -1,0 +1,7 @@
+export const TRANG_THAI_HIEN_THI = {
+  DANG_KHAM: 10,
+  TIEP_THEO: 20,
+  DA_XAC_NHAN: 40,
+  CHO_XAC_NHAN: 50,
+  GOI_NHO: 60,
+};

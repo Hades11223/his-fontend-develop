@@ -1,0 +1,11 @@
+{
+  "short_name": "HIS SAKURA",
+  "name": "HIS SAKURA",
+  "icons": [],
+  "start_url": ".",
+  "display_override": ["window-control-overlay", "minimal-ui"],
+  "display": "fullscreen",
+  "theme_color": "#000000",
+  "background_color": "#ffffff",
+  "gcm_sender_id": "654597310639"
+}

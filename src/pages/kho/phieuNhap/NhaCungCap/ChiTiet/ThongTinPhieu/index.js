@@ -1,0 +1,110 @@
+import { Col, Popover } from "antd";
+import Header1 from "pages/kho/components/Header1";
+import React, { memo, useEffect, useMemo } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { Main } from "./styled";
+import moment from "moment";
+import { useEnum } from "hook";
+import IcInfo from "assets/images/khamBenh/icInfo.svg";
+import { ENUM, LOAI_NHAP_XUAT } from "constants/index";
+
+const ThongTinPhieuNhap = (props) => {
+  const { thongTinPhieu } = useSelector((state) => state.phieuNhapXuat);
+  const {
+    phieuNhapXuat: { getDetail },
+  } = useDispatch();
+
+  const [listloaiDichVu] = useEnum(ENUM.LOAI_DICH_VU, []);
+
+  const dienGiai = useMemo(() => {
+    return `${
+      thongTinPhieu.loaiNhapXuat === LOAI_NHAP_XUAT.LINH_NOI_TRU
+        ? "Phiếu lĩnh nội trú"
+        : "Phiếu lĩnh bù"
+    } ${listloaiDichVu?.find((i) => i.id === thongTinPhieu?.loaiDichVu)?.ten} ${
+      thongTinPhieu.ghiChu
+    }`;
+  }, [listloaiDichVu, thongTinPhieu]);
+
+  const column = (data) => [
+    {
+      name: "Loại hàng hóa:",
+      data: listloaiDichVu?.find((i) => i.id === data?.loaiDichVu)?.ten,
+    },
+    {
+      name: "Khoa trả:",
+      data: data?.dsKhoaChiDinh?.map((item) => item.ten).join(", "),
+    },
+    {
+      name: "Số phiếu:",
+      data: data?.soPhieu,
+    },
+    {
+      name: "Người tạo phiếu:",
+      data: data?.nguoiTaoPhieu?.ten,
+    },
+    {
+      name: "Diễn giải",
+      data: (
+        <Popover title={<div style={{ fontWeight: "bold" }}>{dienGiai}</div>}>
+          <IcInfo className="pointer" />
+        </Popover>
+      ),
+    },
+    {
+      name: "Kho nhận:",
+      data: data.loaiNhapXuat === 85 ? data?.khoDoiUng?.ten : data?.kho?.ten,
+    },
+    {
+      name: "Thành tiền (Theo giá nhập):",
+      data: data?.thanhTien?.formatPrice(),
+    },
+    {
+      name: "Thành tiền (Theo giá bán):",
+      data: data?.thanhTienSuaDoi?.formatPrice(),
+    },
+    {
+      name: "Người duyệt phiếu:",
+      data: data?.nguoiDuyet?.ten,
+    },
+    // {
+    //   name: "Từ ngày",
+    //   data: (
+    //     <span>
+    //       {moment(data?.thoiGianTaoPhieu)?.format("DD/MM/YYYY")}
+    //       <span style={{ fontWeight: "bold" }}> Đến ngày </span>
+    //       {data?.thoiGianDuyet
+    //         ? moment(data?.thoiGianDuyet)?.format("DD/MM/YYYY")
+    //         : ""}
+    //     </span>
+    //   ),
+    // },
+    {
+      name: "Ngày duyệt phiếu:",
+      data:
+        data.thoiGianGuiDuyet &&
+        moment(data.thoiGianGuiDuyet).format("DD/MM/YYYY"),
+    },
+  ];
+
+  return (
+    <>
+      <Header1 title={"Thông tin phiếu"} noPadding={true} bottom={9}></Header1>
+      <Main>
+        {column(thongTinPhieu).map((item, index) => (
+          <Col key={index} span={6}>
+            <label
+              className="label pointer"
+              onClick={item.onClick && item.onClick}
+            >
+              {item.name}
+            </label>
+            <div className="content">{item.data}</div>
+          </Col>
+        ))}
+      </Main>
+    </>
+  );
+};
+
+export default memo(ThongTinPhieuNhap);

@@ -1,0 +1,17 @@
+.ant-popover.ant-popover-placement-bottomLeft {
+    padding-top: 50px;
+}
+.ant-popover-arrow {
+    display: none;
+}
+.ant-popover-placement-bottom,
+.ant-popover-placement-bottomLeft,
+.ant-popover-placement-bottomRight {
+    padding-top: 0px;
+}
+.ant-popover-inner {
+    border-radius: 8px 0px 8px 8px;
+}
+.ant-checkbox-group {
+    width: 140px;
+}

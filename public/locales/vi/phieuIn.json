@@ -1,0 +1,17 @@
+{
+  "xemPhieuDaKyMoiNhat": "Xem phiếu đã ký mới nhất",
+  "xemPhieuChuaKyMoiNhat": "Xem phiếu chưa ký mới nhất",
+  "inTatCa": "In tất cả",
+  "kyTrinhKy": "Ký / Trình ký",
+  "kyVaIn": "Ký và in",
+  "vuiLongChonPhieu": "Vui lòng chọn phiếu",
+  "khoGiay": "Khổ giấy",
+  "tenPhieu": "Tên phiếu",
+  "khongTonTaiPhieuIn": "Không tồn tại phiếu in",
+  "chuaDuocCauHinhThongTinPhieu": "Chưa được cấu hình thông tin phiếu",
+  "khongCoThongTinPhieuIn": "Không có thông tin phiếu in",
+  "khongTonTaiPhieuYeuCauHoanDoi": "Không tồn tại phiếu yêu cầu hoàn/đổi trạng thái chờ duyệt",
+  "inKetQua": "In kết quả",
+  "inPhieuChiDinh": "In phiếu chỉ định",
+  "inPhieuHoan": "In phiếu hoàn "
+}

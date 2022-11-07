@@ -1,0 +1,121 @@
+import React, {
+  useState,
+  forwardRef,
+  useImperativeHandle,
+  useRef,
+} from "react";
+import {
+  Main,
+  Wrapper,
+  ModalStyled,
+  ModalHeader,
+  ModalContent,
+  ModalFooter,
+  ButtonBack,
+  ButtonNext,
+} from "./styled";
+import { Col, Row, Input } from "antd";
+import { useSelector } from "react-redux";
+import { GIOI_TINH_BY_VALUE } from "constants/index";
+const ModalCanclePayment = (props, ref) => {
+  const {
+    thuocChiTiet: { infoPatient },
+  } = useSelector((state) => state);
+  const { nbDotDieuTri, phieuThu } = infoPatient || {};
+  const refOk = useRef(null);
+  const [state, _setState] = useState({
+    isModalVisible: false,
+    discount: 1,
+  });
+  const setState = (data = {}) => {
+    _setState((state) => {
+      return { ...state, ...data };
+    });
+  };
+  useImperativeHandle(ref, () => ({
+    show: (options, onOk) => {
+      setState({
+        isModalVisible: true,
+      });
+      refOk.current = onOk;
+    },
+    close: () => {
+      setState({
+        isModalVisible: false,
+      });
+    },
+  }));
+  const cancelHandler = () => {
+    ref.current.close();
+  };
+  const submitHandler = () => {
+    refOk.current({ valueInput: state.valueInput });
+    ref.current.close();
+  };
+  return (
+    <Wrapper>
+      <ModalStyled
+        width={500}
+        visible={state.isModalVisible}
+        closable={false}
+        footer={null}
+      >
+        <ModalHeader className="modal-header">
+          Xác nhận Hủy thanh toán
+        </ModalHeader>
+        <ModalContent className="modal-content">
+          <Main>
+            <Row>
+              <Col span={24}>
+                <p>
+                  Người bệnh:{" "}
+                  <b>
+                    {nbDotDieuTri?.tenNb}
+                    {` - ${
+                      nbDotDieuTri?.gioiTinh
+                        ? GIOI_TINH_BY_VALUE[
+                            nbDotDieuTri?.gioiTinh
+                          ]
+                        : ""
+                    } - ${`${
+                      nbDotDieuTri?.thangTuoi > 36
+                        ? `${nbDotDieuTri?.tuoi} tuổi`
+                        : `${nbDotDieuTri?.thangTuoi} tháng`
+                    }`}`}
+                  </b>
+                </p>
+                <p>
+                  Tổng tiền hóa đơn:{" "}
+                  <b>
+                    {phieuThu?.tongTien &&
+                      phieuThu?.tongTien.formatPrice()}
+                  </b>
+                </p>
+                <div style={{ marginTop: 10 }}>Lý do hủy</div>
+                <Input
+                  value={state.valueInput}
+                  placeholder="Vui lòng nhập lý do hủy"
+                  onChange={(e) => {
+                    setState({ valueInput: e.target.value });
+                    // refOk.current({valueInput : e.target.value})
+                  }}
+                />
+              </Col>
+            </Row>
+          </Main>
+        </ModalContent>
+        <ModalFooter className="modal-footer">
+          <ButtonBack
+            onClick={cancelHandler}
+            style={{ border: "1px solid gray" }}
+          >
+            Quay lại
+          </ButtonBack>
+          <ButtonNext onClick={submitHandler}>Đồng ý</ButtonNext>
+        </ModalFooter>
+      </ModalStyled>
+    </Wrapper>
+  );
+};
+
+export default forwardRef(ModalCanclePayment);

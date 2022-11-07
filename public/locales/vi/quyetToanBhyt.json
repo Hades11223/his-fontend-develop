@@ -1,0 +1,20 @@
+{
+  "dayQuyetToanBaoHiemThanhCong": "Đẩy quyết toán bảo hiểm thành công",
+  "trangThaiQtld": "Trạng thái QLTD",
+  "guiGiamDinhBhTheoThoiGianDuyet": "Gửi giám định BH theo thời gian duyệt",
+  "tongSoHoDayQuyetToan": "Tổng số Hồ sơ đẩy quyết toán: {0}, Số Hồ sơ thành công: {1}, Số hồ sơ thất bại: {2}",
+  "nhapHO_TEN": "Nhập HO_TEN",
+  "nhapMA_LK": "Nhập MA_LK",
+  "nhapMA_BN": "Nhập MA_BN",
+  "nhapMA_THE": "Nhập MA_THE",
+  "tatCaTrangThai": "Tất cả trạng thái",
+  "ngayTaoHoSo": "Ngày tạo hồ sơ",
+  "chonNgayTao": "Chọn ngày tạo",
+  "taoHoSoQuyetToan": "Tạo hồ sơ duyệt quyết toán BHYT",
+  "taoHoSoHangLoat": "Tạo hồ sơ hàng loạt",
+  "taoHoSoQuyetToanBHYTHangLoat": "Tạo hồ sơ quyết toán BHYT hàng loạt",
+  "xoaHoSoQuyetToanBHYTHangLoat": "Xóa hồ sơ quyết toán BHYT hàng loạt",
+  "taoHoSoTheoNgayThanhToan": "Tạo hồ sơ theo ngày thanh toán của người bệnh",
+  "taoHoSoTheoNgayDangKy": "Tạo hồ sơ theo ngày đăng ký/ ngày ra viện của người bệnh",
+  "chonNgayTaoHoSo": "Chọn ngày tạo hồ sơ XML"
+}

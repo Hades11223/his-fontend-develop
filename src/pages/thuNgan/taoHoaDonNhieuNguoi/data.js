@@ -1,0 +1,42 @@
+export const data = [
+  {
+    soPhieuThu: "123",
+    tongTien: "1200000",
+    thoiGianThanhToan: new Date(),
+    maHoSo: "HH1213",
+    maNb: "hh1213",
+    hoTenNb: "nguyen van a,",
+  },
+  {
+    soPhieuThu: "123",
+    tongTien: "1200000",
+    thoiGianThanhToan: new Date(),
+    maHoSo: "HH1213",
+    maNb: "hh1213",
+    hoTenNb: "nguyen van a,",
+  },
+  {
+    soPhieuThu: "123",
+    tongTien: "1200000",
+    thoiGianThanhToan: new Date(),
+    maHoSo: "HH1213",
+    maNb: "hh1213",
+    hoTenNb: "nguyen van a,",
+  },
+  {
+    soPhieuThu: "123",
+    tongTien: "1200000",
+    thoiGianThanhToan: new Date(),
+    maHoSo: "HH1213",
+    maNb: "hh1213",
+    hoTenNb: "nguyen van a,",
+  },
+  {
+    soPhieuThu: "123",
+    tongTien: "1200000",
+    thoiGianThanhToan: new Date(),
+    maHoSo: "HH1213",
+    maNb: "hh1213",
+    hoTenNb: "nguyen van a,",
+  },
+];

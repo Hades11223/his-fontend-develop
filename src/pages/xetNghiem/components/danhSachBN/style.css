@@ -1,0 +1,20 @@
+.ant-popover-inner {
+    border-radius: 8px 0px 8px 8px;
+}
+ .ant-checkbox-group {
+        width: 170px;
+ }
+ .ant-checkbox + span {
+    padding-left: 20px;
+}
+/* .status-item.pedding {
+    border-bottom: 1px solid;
+}
+.lable-item {
+    padding: 12px;
+    border-left: 1px solid;
+    line-height: 35px;
+}
+.ant-checkbox-wrapper {
+    padding: 6px 12px;
+}  */

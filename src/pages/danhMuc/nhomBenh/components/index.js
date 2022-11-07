@@ -1,0 +1,13 @@
+export { default as NhomBenhChinh } from "./nhomBenhChinh";
+export { default as ChuongBenh } from "./chuongBenh";
+export { default as NhomBenhPhu1 } from "./nhomBenhPhu1";
+export { default as NhomBenhPhu2 } from "./nhomBenhPhu2";
+export { default as LoaiBenh } from "./loaiBenh";
+export { default as TenBenh } from "./TenBenh";
+export { default as TongHop } from "./tongHop";
+export { default as FormChuongBenh } from "./FormChuongBenh";
+export { default as FormNhomBenhChinh } from "./FormNhomBenhChinh";
+export { default as FormNhomBenhPhu1 } from "./FormNhomBenhPhu1";
+export { default as FormNhomBenhPhu2 } from "./FormNhomBenhPhu2";
+export { default as FormLoaiBenh } from "./FormLoaiBenh";
+export { default as FormTenBenh } from "./FormTenBenh";

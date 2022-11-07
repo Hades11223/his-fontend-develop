@@ -1,0 +1,38 @@
+.ant-table-thead > tr > th {
+  background: #ffffff;
+  border-bottom: none;
+}
+.ant-table-tbody > tr > td {
+  border-bottom: none;
+}
+.ant-table-thead > tr > th,
+.ant-table-tbody > tr > td,
+.ant-table tfoot > tr > th,
+.ant-table tfoot > tr > td {
+  padding: 5px 5px;
+}
+::-webkit-scrollbar-track {
+  background: #dedede;
+  border-radius: 25px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(23, 43, 77, 0.25);
+  border-radius: 25px;
+}
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.ant-col {
+  width: 100%;
+}
+@media (max-width: 1199px) {
+  .pl-3 {
+    padding: 0;
+  }
+}
+
+.ant-select-dropdown .ant-select-item-option-content {
+  font-family: Nunito Sans;
+  color: #172b4d;
+}

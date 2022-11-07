@@ -1,0 +1,251 @@
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+ul,
+ol,
+img {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+label {
+  display: block;
+}
+body {
+  overscroll-behavior-y: contain;
+  line-height: 1;
+  font-family: "Nunito Sans" !important;
+}
+ol,
+ul {
+  list-style: none;
+}
+.body {
+  background: white;
+  font-family: "Nunito Sans" !important;
+  position: relative;
+}
+body > iframe {
+  width: 0 !important;
+  height: 0 !important;
+}
+
+.pr-3 {
+  padding-right: 15px;
+}
+.pl-3 {
+  padding-left: 15px;
+}
+.ant-select-item {
+  font-weight: 600 !important;
+}
+.ant-picker-content th,
+.ant-picker-content td {
+  font-weight: 600 !important;
+}
+
+.ant-spin-nested-loading {
+  width: 100%;
+  overflow: hidden;
+}
+
+.ant-spin-nested-loading > div > .ant-spin .ant-spin-text {
+  color: red;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.ant-select-focused > .ant-select-selector {
+  border: 1px solid #0762f7 !important;
+  box-shadow: 0 0 0 3px #0062ff47 !important;
+}
+.ant-input:focus {
+  border: 1px solid #0762f7 !important;
+  box-shadow: 0 0 0 3px #0062ff47 !important;
+}
+.ant-input:hover {
+  border: 1px solid #0762f7 !important;
+  box-shadow: 0 0 0 3px #0062ff47 !important;
+}
+
+.ant-input-number:hover {
+  border: 1px solid #0762f7 !important;
+  box-shadow: 0 0 0 3px #0062ff47 !important;
+}
+.ant-input-number:focus {
+  border: 1px solid #0762f7 !important;
+  box-shadow: 0 0 0 3px #0062ff47 !important;
+}
+.ant-input-number-focused {
+  border: 1px solid #0762f7 !important;
+  box-shadow: 0 0 0 3px #0062ff47 !important;
+}
+.ant-select-selector:hover {
+  border: 1px solid #0762f7 !important;
+  box-shadow: 0 0 0 3px #0062ff47 !important;
+}
+.ant-picker:hover {
+  border: 1px solid #0762f7 !important;
+  box-shadow: 0 0 0 3px #0062ff47 !important;
+}
+.ant-picker-focused {
+  border: 1px solid #0762f7 !important;
+  box-shadow: 0 0 0 3px #0062ff47 !important;
+}
+.ant-input-disabled:hover {
+  border: none !important;
+  box-shadow: none !important;
+}
+.ant-input-number.ant-input-number-disabled {
+  border: none !important;
+  box-shadow: none !important;
+}
+.ant-input-number.ant-input-number-disabled:hover {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+@font-face {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Nunito Sans Regular"), local("NunitoSans-Regular"),
+    url(../fonts/nunitosans/NunitoSans-Regular.ttf) format("woff2");
+}
+
+@font-face {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local("Nunito Sans SemiBold"), local("NunitoSans-SemiBold"),
+    url(../fonts/nunitosans/NunitoSans-SemiBold.ttf) format("woff2");
+}
+
+@font-face {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local("Nunito Sans Bold"), local("NunitoSans-Bold"), url(../fonts/nunitosans/NunitoSans-Bold.ttf) format("woff2");
+}
+
+@font-face {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: local("Nunito Sans Black"), local("NunitoSans-Black"),
+    url(../fonts/nunitosans/NunitoSans-Black.ttf) format("woff2");
+}
+@font-face {
+  font-family: "SourceSansPro";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Source Sans Pro Regular"), local("SourceSansPro-Regular"),
+    url(../fonts/sourcesanspro/SourceSansPro-Regular.ttf) format("woff2");
+}
+@font-face {
+  font-family: "SourceSansPro";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local("Source Sans Pro Bold"), local("SourceSansPro-Bold"),
+    url(../fonts/sourcesanspro/SourceSansPro-Bold.ttf) format("woff2");
+}
+@font-face {
+  font-family: "SourceSansPro";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local("Source Sans Pro Semi Bold"), local("SourceSansPro-SemiBold"),
+    url(../fonts/sourcesanspro/SourceSansPro-SemiBold.ttf) format("woff2");
+}
+.error {
+  color: #b6030c;
+  /* color: #f5222d; */
+  font-size: 12px !important;
+  font-weight: bold;
+  display: block;
+}
+.error2 {
+  color: #f5222d;
+  margin-top: 5px;
+  font-size: 12px !important;
+  font-weight: bold;
+  display: block;
+}
+.label-error {
+  color: red !important;
+}
+.list-hospital.display-lists li {
+  padding-bottom: 5px;
+  cursor: pointer;
+}
+/* .list-hospital.display-lists li:hover {
+    background-color: #b4ec5159;
+} */
+.list-hospital.mostly-customized-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+}
+.popup-list label {
+  cursor: pointer;
+}
+.popup-list input[type="radio"]:checked + label .around-radio {
+  background-color: #03a9f4;
+}
+.popup-list input[type="radio"]:checked + label {
+  background-color: #03a9f44f;
+  color: #000;
+}
+.popup-list label {
+  display: flex;
+}
+.popup-list input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+.visible-scrollbar,
+.invisible-scrollbar,
+.mostly-customized-scrollbar {
+  display: block;
+  overflow: auto;
+}
+.mostly-customized-scrollbar::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.11);
+}
+.content-sidebar.history-lists.mostly-customized-scrollbar::-webkit-scrollbar {
+  background: rgba(255, 255, 255, 0.05);
+  z-index: 999;
+}
+.mostly-customized-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  position: absolute;
+  left: 0;
+}
+.ant-input-disabled {
+  color: #172b4d !important;
+}
+.ant-picker-suffix {
+  color: #7a869a;
+}
+
+.pointer {
+  cursor: pointer;
+}

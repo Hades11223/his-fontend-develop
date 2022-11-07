@@ -1,0 +1,35 @@
+.ant-popover-inner {
+  background: #172b4d;
+  /* shadow-khung-2 */
+
+  box-shadow: 0px 0px 20px rgba(9, 30, 66, 0.2);
+  border-radius: 16px;
+  width: 575px;
+  height: 278px;
+  margin-left: 80px;
+  margin-right: 60px;
+}
+.ant-popover-arrow {
+  background: #172b4d;
+  border-right-color: #172b4d !important;
+  border-bottom-color: #172b4d !important;
+  left: 270px;
+}
+
+label {
+  color: white;
+  font-family: Nunito Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 38px;
+}
+@media (max-width: 765px) {
+  .ant-popover-inner {
+    width: 285px;
+    height: 250px;
+  }
+  label {
+    font-size: 14px;
+  }
+}
