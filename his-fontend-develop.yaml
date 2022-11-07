@@ -1,0 +1,53 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: his-fontend-develop
+  namespace: his-fontend-develop
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: his-fontend-develop
+  template:
+    metadata:
+      labels:
+        app: his-fontend-develop
+    spec:
+      containers:
+      - image: mainamctk33/reactjs:1.0
+        imagePullPolicy: Always
+        name: his-fontend-develop
+        ports:
+        - containerPort: 80
+          name: 80tcp31996
+          protocol: TCP
+        volumeMounts:
+        - mountPath: /usr/share/nginx/html
+          name: his-fontend-develop
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+      volumes:
+      - name: his-fontend-develop
+        nfs:
+          path: /mnt/NFS_Share/his-fontend-develop/app
+          server: 10.0.0.18
+  
+------------------------
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: his-fontend-develop
+  namespace: his-fontend-develop
+spec:
+  selector:
+    app: his-fontend-develop
+  type: NodePort
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+    nodePort: 31996
