@@ -21,7 +21,6 @@ pipeline {
         sh 'cd /var/lib/jenkins/jobs/his-fontend-develop/workspace'
         sh 'npm install'
         sh 'yarn install --ignore-engines'
-        sh 'yarn build'
         sh 'sudo scp -r build/* /mnt/NFS_Share/his-fontend-develop/app'
       }
     }
